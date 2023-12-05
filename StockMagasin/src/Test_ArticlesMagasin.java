@@ -4,7 +4,7 @@ public class Test_ArticlesMagasin {
     public static void main(String[] args){
 
 
-    //les champs de classe EM: double prixAchats,double prixVente,String Nom,String Fourniseur
+    //les champs de classe Electromenagers: double prixAchats,double prixVente,String Nom,String Fourniseur
    ElectroMenagers frigidaire=new ElectroMenagers(2400,3600,"frigidaire Condor","Amin");
    ElectroMenagers E=(ElectroMenagers)frigidaire;
     ElectroMenagers laveVesselles=new ElectroMenagers(1800,2200,"laveV LG","Asma");
@@ -14,13 +14,10 @@ public class Test_ArticlesMagasin {
     Primeurs B=new Primeurs(400,1500,"Primeurs B","Ali");
     Primeurs C=new Primeurs(700,750,"Primeurs C","salih");
     Primeurs D=new Primeurs(3400,7500,"Primeurs D","oumayma");
-
-
+        
     ElectroMenagers[] tabEM={frigidaire,laveVesselles,laveMachine};
-
-
-
     Primeurs[] tabPr={A,B,C,D};
+        
     Magasin carrefour=new Magasin(tabEM,tabPr);
     Scanner scanf =new Scanner(System.in);
      for(Primeurs A7:carrefour.ProduitsPr) {
@@ -72,7 +69,6 @@ public class Test_ArticlesMagasin {
                     A7.TerminerSolde(pourcentage);
                 }
             }
-
             else {
                 continue;
             }
@@ -85,14 +81,5 @@ public class Test_ArticlesMagasin {
         }
         double RN=carrefour.RevenueNet-carrefour.deponces;
         System.out.println("Les revenue Net sont: "+RN+" DT");
-
-
-
-
-
-
-
-
     }
-
 }
